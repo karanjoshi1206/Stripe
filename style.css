@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@600&family=Lato:wght@900&family=Roboto+Slab:wght@600&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: "Roboto Slab", serif;
+  overflow-x: hidden;
+}
+.nav {
+  margin: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav2 ul {
+  display: flex;
+  justify-content: center;
+}
+.nav2 ul li {
+  list-style: none;
+}
+.nav2 ul li a {
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  margin: 0px 20px;
+  color: white;
+}
+.nav1 h3 {
+  font-family: "Anton", sans-serif;
+  font-weight: lighter;
+  color: white;
+}
+
+.container1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+  -webkit-transform-origin: 100% 0;
+  -ms-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-transform: skew(-75deg);
+  -ms-transform: skew(-75deg);
+  transform: skew(-69deg);
+  z-index: -1;
+}
+.modbod {
+  display: flex;
+  justify-content: space-around;
+}
+.payment {
+  margin-bottom: 20px;
+}
+.value {
+  margin: 20px;
+}
+.value h5 h6 {
+  margin: 20px;
+}
+.value h6 {
+  margin-bottom: 30px;
+}
+.mod2 {
+  display: flex;
+  flex-direction: column;
+}
+.mfot {
+  display: flex;
+  justify-content: space-around;
+}
+.mf3 {
+  display: flex;
+  justify-content: left;
+}
+
+.btn1 {
+  width: 150px;
+  padding: 4px;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  background: none;
+  background-color: #4158d0;
+  background-image: linear-gradient(43deg, #c850c0 26%, #ffcc70 200%);
+}
+.container2 {
+  margin: 100px 0px;
+  display: flex;
+  justify-content: space-around;
+}
+.content {
+  width: 50%;
+  margin: 50px;
+}
+.content h1 {
+  font-size: 4rem;
+  font-family: "Lato", sans-serif;
+  color: black;
+}
+.content p {
+  color: rgb(95, 95, 95);
+  font-size: 1.2rem;
+}
+.mobim {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  align-items: flex-start;
+  height: 550px;
+  width: 300px;
+  border-radius: 35px;
+  border: 5px solid white;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.07), 0px 2px 4px rgba(0, 0, 0, 0.07),
+    0px 4px 8px rgba(0, 0, 0, 0.07), 0px 8px 16px rgba(0, 0, 0, 0.07),
+    0px 16px 32px rgba(0, 0, 0, 0.07), 0px 32px 64px rgba(0, 0, 0, 0.07);
+}
+.btn2 {
+  width: 120px;
+  padding: 4px;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  background: none;
+  background-color: black;
+}
+.btn2:hover {
+  background-color: rgb(110, 109, 109);
+}
+.btn3 {
+  font-family: serif;
+  font-weight: bold;
+  width: 140px;
+  padding: 4px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 20px;
+  background: none;
+}
+.btn3:hover {
+  color: rgb(167, 167, 167);
+}
+
+.crd {
+  margin: 20px 40%;
+  height: 80px;
+  width: 50px;
+}
+.mobim h5 {
+  width: 200px;
+  font-size: 0.9rem;
+  margin: 0 27%;
+}
+.mobim h6 {
+  font-size: 0.7rem;
+  margin: 0 35%;
+}
+.btn4 {
+  width: 80%;
+  background: black;
+  margin: 10px 30px;
+  border-radius: 5px;
+  color: white;
+}
+.app {
+  color: white;
+}
+input {
+  border: none;
+  width: 250px;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.07), 0px 2px 4px rgba(0, 0, 0, 0.07),
+    0px 4px 8px rgba(0, 0, 0, 0.07), 0px 8px 16px rgba(0, 0, 0, 0.07),
+    0px 16px 32px rgba(0, 0, 0, 0.07), 0px 32px 64px rgba(0, 0, 0, 0.07);
+}
+.image {
+  margin-left: 10%;
+  width: 50%;
+  display: flex;
+}
+.im2 img {
+  height: 300px;
+  width: 500px;
+  margin: 20px;
+  border: 2px solid rgb(172, 171, 171);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.07), 0px 2px 4px rgba(0, 0, 0, 0.07),
+    0px 4px 8px rgba(0, 0, 0, 0.07), 0px 8px 16px rgba(0, 0, 0, 0.07),
+    0px 16px 32px rgba(0, 0, 0, 0.07), 0px 32px 64px rgba(0, 0, 0, 0.07);
+}
+.sponsor {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.logo {
+  height: 200px;
+  width: 200px;
+  /* background: black; */
+  margin: 60px;
+}
+.logo img {
+  height: 60px;
+  width: 140px;
+  margin: auto;
+}
+.textcontent {
+  width: 80%;
+  display: flex;
+  margin-left: 200px;
+}
+.text1 {
+  margin: 40px;
+  width: 50%;
+}
+.text2 {
+  margin: 180px 40px;
+  width: 50%;
+}
+.text1 h4 {
+  margin-bottom: 20px;
+  color: rgb(108, 17, 255);
+}
+.text1 h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.text1 p {
+  font-size: 1.2rem;
+  color: rgb(107, 107, 107);
+}
+.text2 p {
+  font-size: 1.2rem;
+  color: rgb(107, 107, 107);
+}
+.nbtn {
+  width: 250px;
+  height: 30px;
+  position: relative;
+  bottom: 90px;
+  left: 250px;
+  background-color: rgb(123, 57, 245);
+  color: white;
+}
+.tst {
+  display: flex;
+}
+.lasttext {
+  height: 150vh;
+  background-color: #1d2757;
+  background-image: linear-gradient(90deg, #4158d0);
+  padding: 90px;
+}
+.txtt {
+  width: 50%;
+}
+.txtt h3,
+h1,
+p {
+  margin-bottom: 20px;
+  color: white;
+}
+.txtt h3 {
+  color: rgb(94, 231, 255);
+}
+.txtt h1 {
+  font-weight: bold;
+}
+.txtt p {
+  color: rgb(163, 162, 162);
+  font-size: 1.3rem;
+}
+.but {
+  width: 180px;
+  height: 50px;
+  background-color: rgb(94, 231, 255);
+}
+.but:hover {
+  background-color: white;
+  color: black;
+}
+.lst {
+  background-color: #2b3981;
+  height: 400px;
+  width: 500px;
+  margin-left: 30px;
+  padding: 30px;
+  margin-bottom: 5px;
+}
+.cards {
+  margin: 40px;
+  padding: 30px;
+  height: 70vh;
+  /* background-color: yellow; */
+}
+.cards h4 {
+  color: rgb(207, 133, 241);
+}
+.cards h1 {
+  margin: 20px;
+  width: 70%;
+  color: black;
+}
+.cardcontent {
+  display: flex;
+  justify-content: space-around;
+}
+.card1 {
+  height: 300px;
+  width: 300px;
+  margin: 20px;
+  /* border: 2px solid black; */
+}
+.ft {
+  height: 20px;
+  width: 20px;
+  margin: 0px 140px;
+  color: rgb(97, 244, 255);
+}
+.card1 p {
+  color: black;
+}
+.last {
+  width: 35%;
+}
+.last h4 {
+  color: rgb(96, 223, 255);
+}
+.last p {
+  font-size: 1.1rem;
+}
+.lastcon h5 {
+  color: white;
+  font-size: 1.5rem;
+}
+.lastcon p {
+  font-size: 1.3rem;
+  color: rgb(158, 154, 154);
+}
+.final {
+  height: 100vh;
+}
+.but2 {
+  border-radius: 35px;
+  background-color: rgb(255, 60, 255);
+}
+.but2:hover {
+  background-color: black;
+
+  color: white;
+}
+
+.bn {
+  display: flex;
+}
+.crd {
+  width: 30%;
+}

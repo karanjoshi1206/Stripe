@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Payment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+</head>
+
+<body>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@600&family=Lato:wght@900&family=Roboto+Slab:wght@600&display=swap");
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            font-family: "Roboto Slab", serif;
+            overflow-x: hidden;
+        }
+
+        .nav {
+            margin: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav2 ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav2 ul li {
+            list-style: none;
+        }
+
+        .nav2 ul li a {
+            font-family: "Inter", sans-serif;
+            text-decoration: none;
+            margin: 0px 20px;
+            color: white;
+        }
+
+        .nav1 h3 {
+            font-family: "Anton", sans-serif;
+            font-weight: lighter;
+            color: white;
+        }
+
+        .container1::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #4158d0;
+            background-image: linear-gradient(43deg,
+                    #4158d0 0%,
+                    #c850c0 46%,
+                    #ffcc70 100%);
+            -webkit-transform-origin: 100% 0;
+            -ms-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+            -webkit-transform: skew(-75deg);
+            -ms-transform: skew(-75deg);
+            transform: skew(-69deg);
+            z-index: -1;
+        }
+
+        .modbod {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .payment {
+            margin-bottom: 20px;
+        }
+
+        .value {
+            margin: 20px;
+        }
+
+        .value h5 h6 {
+            margin: 20px;
+        }
+
+        .value h6 {
+            margin-bottom: 30px;
+        }
+
+        .mod2 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mfot {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .mf3 {
+            display: flex;
+            justify-content: left;
+        }
+
+        .btn1 {
+            width: 150px;
+            padding: 4px;
+            border: none;
+            color: white;
+            border-radius: 20px;
+            background: none;
+            background-color: #4158d0;
+            background-image: linear-gradient(43deg, #c850c0 26%, #ffcc70 200%);
+        }
+
+        .container2 {
+            margin: 100px 0px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .content {
+            width: 50%;
+            margin: 50px;
+        }
+
+        .content h1 {
+            font-size: 4rem;
+            font-family: "Lato", sans-serif;
+            color: black;
+        }
+
+        .content p {
+            color: rgb(95, 95, 95);
+            font-size: 1.2rem;
+        }
+
+        .mobim {
+            /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+            align-items: flex-start;
+            height: 550px;
+            width: 300px;
+            border-radius: 35px;
+            border: 5px solid white;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.07), 0px 2px 4px rgba(0, 0, 0, 0.07),
+                0px 4px 8px rgba(0, 0, 0, 0.07), 0px 8px 16px rgba(0, 0, 0, 0.07),
+                0px 16px 32px rgba(0, 0, 0, 0.07), 0px 32px 64px rgba(0, 0, 0, 0.07);
+        }
+
+        .btn2 {
+            width: 120px;
+            padding: 4px;
+            border: none;
+            color: white;
+            border-radius: 20px;
+            background: none;
+            background-color: black;
+        }
+
+        .btn2:hover {
+            background-color: rgb(110, 109, 109);
+        }
+
+        .btn3 {
+            font-family: serif;
+            font-weight: bold;
+            width: 140px;
+            padding: 4px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 20px;
+            background: none;
+        }
+
+        .btn3:hover {
+            color: rgb(167, 167, 167);
+        }
+
+        .crd {
+            margin: 20px 40%;
+            height: 80px;
+            width: 50px;
+        }
+
+        .mobim h5 {
+            width: 200px;
+            font-size: 0.9rem;
+            margin: 0 27%;
+        }
+
+        .mobim h6 {
+            font-size: 0.7rem;
+            margin: 0 35%;
+        }
+
+        .btn4 {
+            width: 80%;
+            background: black;
+            margin: 10px 30px;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .app {
+            color: white;
+        }
+
+        input {
+            border: none;
+            width: 250px;
+            border-radius: 4px;
+            outline: none;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.07), 0px 2px 4px rgba(0, 0, 0, 0.07),
+                0px 4px 8px rgba(0, 0, 0, 0.07), 0px 8px 16px rgba(0, 0, 0, 0.07),
+                0px 16px 32px rgba(0, 0, 0, 0.07), 0px 32px 64px rgba(0, 0, 0, 0.07);
+        }
+
+        .image {
+            margin-left: 10%;
+            width: 50%;
+            display: flex;
+        }
+
+        .im2 img {
+            height: 300px;
+            width: 500px;
+            margin: 20px;
+            border: 2px solid rgb(172, 171, 171);
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.07), 0px 2px 4px rgba(0, 0, 0, 0.07),
+                0px 4px 8px rgba(0, 0, 0, 0.07), 0px 8px 16px rgba(0, 0, 0, 0.07),
+                0px 16px 32px rgba(0, 0, 0, 0.07), 0px 32px 64px rgba(0, 0, 0, 0.07);
+        }
+
+        .sponsor {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            height: 200px;
+            width: 200px;
+            /* background: black; */
+            margin: 60px;
+        }
+
+        .logo img {
+            height: 60px;
+            width: 140px;
+            margin: auto;
+        }
+
+        .textcontent {
+            width: 80%;
+            display: flex;
+            margin-left: 200px;
+        }
+
+        .text1 {
+            margin: 40px;
+            width: 50%;
+        }
+
+        .text2 {
+            margin: 180px 40px;
+            width: 50%;
+        }
+
+        .text1 h4 {
+            margin-bottom: 20px;
+            color: rgb(108, 17, 255);
+        }
+
+        .text1 h2 {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .text1 p {
+            font-size: 1.2rem;
+            color: rgb(107, 107, 107);
+        }
+
+        .text2 p {
+            font-size: 1.2rem;
+            color: rgb(107, 107, 107);
+        }
+
+        .nbtn {
+            width: 250px;
+            height: 30px;
+            position: relative;
+            bottom: 90px;
+            left: 250px;
+            background-color: rgb(123, 57, 245);
+            color: white;
+        }
+
+        .tst {
+            display: flex;
+        }
+
+        .lasttext {
+            height: 150vh;
+            background-color: #1d2757;
+            background-image: linear-gradient(90deg, #4158d0);
+            padding: 90px;
+        }
+
+        .txtt {
+            width: 50%;
+        }
+
+        .txtt h3,
+        h1,
+        p {
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .txtt h3 {
+            color: rgb(94, 231, 255);
+        }
+
+        .txtt h1 {
+            font-weight: bold;
+        }
+
+        .txtt p {
+            color: rgb(163, 162, 162);
+            font-size: 1.3rem;
+        }
+
+        .but {
+            width: 180px;
+            height: 50px;
+            background-color: rgb(94, 231, 255);
+        }
+
+        .but:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .lst {
+            background-color: #2b3981;
+            height: 400px;
+            width: 500px;
+            margin-left: 30px;
+            padding: 30px;
+            margin-bottom: 5px;
+        }
+
+        .cards {
+            margin: 40px;
+            padding: 30px;
+            height: 70vh;
+            /* background-color: yellow; */
+        }
+
+        .cards h4 {
+            color: rgb(207, 133, 241);
+        }
+
+        .cards h1 {
+            margin: 20px;
+            width: 70%;
+            color: black;
+        }
+
+        .cardcontent {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .card1 {
+            height: 300px;
+            width: 300px;
+            margin: 20px;
+            /* border: 2px solid black; */
+        }
+
+        .ft {
+            height: 20px;
+            width: 20px;
+            margin: 0px 140px;
+            color: rgb(97, 244, 255);
+        }
+
+        .card1 p {
+            color: black;
+        }
+
+        .last {
+            width: 35%;
+        }
+
+        .last h4 {
+            color: rgb(96, 223, 255);
+        }
+
+        .last p {
+            font-size: 1.1rem;
+        }
+
+        .lastcon h5 {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .lastcon p {
+            font-size: 1.3rem;
+            color: rgb(158, 154, 154);
+        }
+
+        .final {
+            height: 100vh;
+        }
+
+        .but2 {
+            border-radius: 35px;
+            background-color: rgb(255, 60, 255);
+        }
+
+        .but2:hover {
+            background-color: black;
+
+            color: white;
+        }
+
+        .bn {
+            display: flex;
+        }
+
+        .crd {
+            width: 30%;
+        }
+    </style>
+    <nav>
+        <div class="container1">
+            <div class="nav">
+                <div class="nav1">
+                    <h3>
+                        Stripe
+                    </h3>
+                </div>
+                <div class="nav2">
+                    <ul>
+                        <li data-toggle="modal" data-target="#modal"> <a href="#">Products</a> </li>
+                        <li data-toggle="modal" data-target="#modal1"> <a href="#">Developer</a> </li>
+                        <li data-toggle="modal" data-target="#modal2"> <a href="#">Company</a> </li>
+                        <li> <a href="#">Pricing</a> </li>
+                    </ul>
+                </div>
+                <div class="nav3">
+                    <button class="btn1">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- modals for navbar -->
+
+        <div class="modal" tabindex="-1" id="modal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- <p>Modal body text goes here.</p> -->
+                        <div class="modbod">
+                            <div class="payment">
+                                <h5>
+                                    Payment
+                                </h5>
+                                <div class="value">
+                                    <h5> <a href="#">Payment</a> </h5>
+                                    <h6> <a href="#">Online Payment</a> </h6>
+                                    <h5> <a href="#">Terminal</a> </h5>
+                                    <h6> <a href="#">In-person payments</a> </h6>
+                                    <h5> <a href="#">Connect</a> </h5>
+                                    <h6> <a href="#">Payments for platforms</a> </h6>
+                                    <h5> <a href="#">Billing</a> </h5>
+                                    <h6> <a href="#">Subscriptions & invoicing</a> </h6>
+                                </div>
+                            </div>
+
+                            <div class="payment">
+                                <h5>
+                                    Payouts
+                                </h5>
+                                <div class="value">
+                                    <h5> <a href="#">Payouts</a>
+                                    </h5>
+                                    <h6> <a href="#"> Programmatic payouts</a>
+                                    </h6>
+                                    <h5> <a href="#">Issuing
+                                            Card creation</a> </h5>
+                                    <h6> <a href="#">Card creation</a>
+                                    </h6>
+
+                                </div>
+                            </div>
+
+                            <div class="payment">
+                                <h5> BUSINESS OPERATIONS
+
+                                </h5>
+                                <div class="value">
+                                    <h5> <a href="#">Radar</a>
+                                    </h5>
+                                    <h6> <a href="#">Fraud & risk management</a>
+                                    </h6>
+                                    <h5> <a href="#">Sigma</a>
+                                    </h5>
+                                    <h6> <a href="#">Custom reports</a>
+                                    </h6>
+                                    <h5> <a href="#">Atlas</a>
+
+                                    </h5>
+                                    <h6> <a href="#">Startup incorporation</a>
+                                    </h6>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal " tabindex="-1" id="modal1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header mod2">
+                        <h5>Documentation</h5>
+                        <h5>Start integrating Stripe’s products and tools </h6>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modbod">
+                            <div class="payment">
+                                <h6>GET STARTED</h6>
+
+                                <div class="value">
+                                    <h6> <a href="#"> Prebuilt checkout</a> </h6>
+                                    <h6> <a href="#">Libraries and SDKs</a> </h6>
+                                    <h6> <a href="#">Plugins</a> </h6>
+                                    <h6> <a href="#" Code samples></a> </h6>
+
+
+                                </div>
+                            </div>
+
+                            <div class="payment">
+                                <h6>
+                                    GUIDES</h6>
+
+
+                                <div class="value">
+                                    <h6> <a href="#">Manage subscriptions</a> </h6>
+                                    <h6> <a href="#">Send payments</a> </h6>
+                                    <h6> <a href="#">Set up in-person payments</a> </h6>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer mfot">
+                            <div class="ft1">
+                                <h6> <a href="#"> Full API reference</a></h6>
+                                <h6> <a href="#">Support</a> </h6>
+                            </div>
+                            <div class="ft2">
+                                <h6> <a href="#">API status</a> </h6>
+                                <h6> <a href="#">API changelog</a></h6>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal" tabindex="-1" id="modal2">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body mfot">
+                        <div class="ft1">
+                            <h6> <a href="#"> About Stripe</a>
+                            </h6>
+                            <h6> <a href="#"> Customers</a>
+                            </h6>
+                            <h6> <a href="#">Enterprise</a>
+                            </h6>
+                            <h6> <a href="#">Partners</a>
+                            </h6>
+
+                        </div>
+                        <div class="ft2">
+                            <h6> <a href="#"> Jobs</a>
+                            </h6>
+                            <h6> <a href="#">Environment</a>
+                            </h6>
+                            <h6> <a href="#">Newsroom </a> </h6>
+                        </div>
+                    </div>
+                    <div class="modal-footer mf3 ">
+                        <p>
+                            From the blog<br>
+                            We built Checkout so you don't have to ﻿<br>
+                            Introducing the Billing customer portal ﻿<br>
+                            Opposing racism<br>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container2">
+            <div class="content">
+                <h1>Payments infrastructure for the internet</h1>
+                <p>Millions of businesses of all sizes—from startups to large enterprises—use Stripe’s software and APIs
+                    to accept payments, send payouts, and manage their businesses online.</p>
+                <button class="btn2">
+                    Start now <i class="fas fa-arrow-right"></i>
+                </button>
+                <button class="btn3">
+                    contact sales <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            <div class="image">
+                <div class="mobim">
+                    <div> <img src="crd.jpg" alt="" class="crd">
+                    </div>
+                    <div>
+                        <h5>Increment Magazine</h5>
+                        <h6>₹ 14 per quarter
+                        </h6>
+                    </div>
+
+                    <button class="btn4"><i class="fab app fa-apple-pay"></i>
+                    </button>
+                    <h6>Or pay with card</h6>
+                    <h4 style="font-size: 0.8rem;"> Email</h4>
+                    <input type="text" style=" margin-bottom: 20px;">
+                    <h4 style="font-size: 0.8rem;"> Card information</h4>
+                    <input type="text " style=" margin-bottom: 10px;" placeholder="Number">
+                    <input type="date" style=" margin-bottom: 20px;" placeholder="MM/YY">
+                    <h4 style="font-size: 0.8rem;"> Country or region</h4>
+                    <input type=" text " style=" margin-bottom: 2px;" placeholder="United states">
+                    <input type="number " style=" margin-bottom: 10px;" placeholder="Zip">
+                    <button class="btn4">Pay
+                    </button>
+
+
+                </div>
+                <div class="im2">
+                    <img src="download (1).png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </nav>
+    <div class="sponsor">
+        <div class="logo"><img src="l1.png" alt=""></div>
+        <div class="logo"><img src="l2.png" alt=""></div>
+        <div class="logo"><img src="l3.png" alt=""></div>
+        <div class="logo"><img src="l4.png" alt=""></div>
+        <div class="logo"><img src="l5.png" alt=""></div>
+        <div class="logo"><img src="l6.png" alt=""></div>
+        <div class="logo"><img src="l7.png" alt=""></div>
+        <div class="logo"><img src="l8.jpg" alt=""></div>
+
+    </div>
+    <div class="textcontent">
+        <div class="text1">
+            <h4>Unified platform</h4>
+            <h2>A fully integrated suite of payments products</h2>
+            <p>We bring together everything that’s required to build websites and apps that accept payments and send
+                payouts globally. Stripe’s products power payments for <a href="#">online and in-person retailers,
+                    subscriptions
+                    businesses, software platforms and marketplaces</a> , and everything in between.</p>
+        </div>
+        <div class="text2">
+            <p> We also help companies <a href="#">beat fraud, send invoices, issue virtual and physical cards, get
+                    financing,
+                    manage
+                    business spend</a> , and much more.</p>
+
+        </div>
+
+    </div>
+    <button class="btn2 nbtn">
+        Start with payment
+
+    </button>
+
+    <div class="lasttext">
+        <div class="tst">
+            <div class="txtt">
+                <h3>Designed for developers
+                </h3>
+                <h1>The world’s most powerful and easy-to-use APIs</h1>
+                <p>We agonize over the right abstractions so your teams don’t need to stitch together disparate systems
+                    or
+                    spend
+                    months integrating payments functionality.</p>
+                <button class="btn2 but"> Read the docs</button>
+
+            </div>
+
+            <div>
+                <div class="lst">
+                    <p>const stripe = <a href="#"> require</a>("stripe")("sktestdfdfdffrggg")</p><br><br>
+                    <p>await stripe.payementIntents.create({ <br>
+                        amount:2000, <br> currency :"usd" <br> }) ;</p>
+                </div>
+                <div class="lst">
+                    <p>node server.js && stripe listen</p><br><br>
+                    <p>Ready waiting for requests..... <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="cards">
+        <h4>Why Stripe</h4>
+        <h1>A technology-first approach to payments and finance</h1>
+        <div class="cardcontent">
+            <div class="card1">
+                <h5>
+                    Close to the metal</h5>
+                <p>Close to the metal
+                    From <a href="#">direct integrations</a> with card networks and banks to checkout flows in the
+                    browser, we operate
+                    on and optimize at every level of the financial stack.</p>
+            </div>
+            <div class="card1">
+                <h5>
+                    Fastest-improving platform</h5>
+                <p>
+                    We release <a href="#">hundreds of features</a> and improvements each year to help you stay ahead of
+                    industry
+                    shifts. (On average, we deploy our production API 16x per day.)</p>
+            </div>
+            <div class="card1">
+                <h5>
+                    Battle-tested reliability</h5>
+                <p>
+                    Our systems operate with <a href="#"> 99.9%+</a> uptime and are highly scalable and redundant.
+                    Stripe is certified to
+                    the highest compliance standards.</p>
+            </div>
+            <div class="card1">
+                <h5>Intelligent optimizations
+                </h5>
+                <p>
+                    Our machine learning models train on <a href="#">billions</a> of data points and help increase
+                    revenue across
+                    conversion, fraud, revenue recovery, and more.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="final lasttext">
+        <div class="last">
+            <h4>Global scale
+            </h4>
+            <h1>
+                The backbone for internet business</h1>
+            <p>For ambitious companies around the world, Stripe makes moving money as simple, borderless, and
+                programmable as the rest of the internet. Our teams are based in dozens of offices around the world and
+                we process hundreds of billions of dollars each year <a href="#">for startups to large enterprises</a> .
+            </p>
+        </div>
+        <div class="cardcontent">
+            <div class="card1 lastcon">
+                <h5>
+                    250 M +</h5>
+                <p>API request per day ,peeking.<br>
+                    at 13,000 requests a second </p>
+            </div>
+            <div class="card1 lastcon">
+                <h5>
+                    90%</h5>
+                <p>
+                    of US adults have brought from <br> bussiness using stripe</p>
+            </div>
+            <div class="card1 lastcon">
+                <h5>
+                    135+</h5>
+                <p>
+                    Currencies and payment <br> method supported.</p>
+            </div>
+            <div class="card1 lastcon">
+                <h5>35+
+                </h5>
+                <p>
+                    Countries and local acquiring <br> optimizing acceptances rates</p>
+            </div>
+        </div>
+    </div>
+    <div class="end">
+        <div class="cardcontent">
+
+            <div class="card1 crd">
+                <h2>
+                    Ready to get started?</h2>
+                <p>
+                    Explore Stripe Payments, or create an account <br> instantly and start accepting payments. You can
+                    <br>
+                    also
+                    contact us to design a custom package for <br> your business.</p>
+                <div class="bn">
+                    <button class="btn but but2">
+                        Start Now
+                    </button>
+                    <button class="btn3">
+                        contact sales
+                    </button>
+                </div>
+
+            </div>
+            <div class="card1">
+
+                <p>
+                <h5>Always know what you pay</h5>
+                Integrated per-transaction pricing with no hidden fees. <br>
+                <a href="#">Pricing details﻿</a> </p>
+            </div>
+            <div class="card1">
+
+                <p>
+                <h5>Start your integration</h5>
+                <p>Get up and running with Stripe in as little as 10 minutes.</p><br>
+                <a href="$"> API reference﻿</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer  -->
+
+
+    <div class="footer">
+        <div class="row">
+            <div class="col-12 col-md">
+            </div>
+            <div class="col-6 col-md">
+                <h3>Stripe</h3>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted " href="#">India</a></li>
+                    <li><a class="text-muted" href="#">United Kingdom</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Products</h5>
+                <ul class="list-unstyled text-small">Payments</a></li>
+                    <li><a class="text-muted" href="#">Billing</a></li>
+                    <li><a class="text-muted" href="#">Connect</a></li>
+                    <li><a class="text-muted" href="#">Payouts</a></li>
+                    <li><a class="text-muted" href="#">Atlas</a></li>
+                    <li><a class="text-muted" href="#">Radar</a></li>
+                    <li><a class="text-muted" href="#">Issuing</a></li>
+                    <li><a class="text-muted" href="#">Terminal</a></li>
+                    <li><a class="text-muted" href="#">Corporate card</a></li>
+                    <li><a class="text-muted" href="#">Capital</a></li>
+                    <li><a class="text-muted" href="#">Sigma</a></li>
+                    <li><a class="text-muted" href="#">Pricing</a></li>
+
+                </ul>
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+            <div class="col-6 col-md">
+                <h5> Developers</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">Documentation</a></li>
+                    <li><a class="text-muted" href="#">API reference
+                        </a></li>
+                    <li><a class="text-muted" href="#">API status
+
+                        </a></li>
+                    <li><a class="text-muted" href="#">Company
+                        </a></li>
+                    <li><a class="text-muted" href="#">About
+                        </a></li>
+                    <li><a class="text-muted" href="#">Customers
+                        </a></li>
+                    <li><a class="text-muted" href="#">Partners
+                        </a></li>
+                    <li><a class="text-muted" href="#">Newsroom
+                        </a></li>
+                    <li><a class="text-muted" href="#">Environment
+                        </a></li>
+
+                    <li><a class="text-muted" href="#">Jobs
+                        </a></li>
+                    <li><a class="text-muted" href="#">Blog
+                        </a></li>
+
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Learn more</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#"> Use cases
+                        </a></li>
+                    <li><a class="text-muted" href="#">Platforms</a></li>
+                    <li><a class="text-muted" href="#">Marketplaces</a></li>
+                    <li><a class="text-muted" href="#">Enterprise</a></li>
+                    <li><a class="text-muted" href="#">Resources</a></li>
+                    <li><a class="text-muted" href="#">Supports</a></li>
+                    <li><a class="text-muted" href="#">Contact</a></li>
+                    <li><a class="text-muted" href="#">Guides</a></li>
+                    <li><a class="text-muted" href="#">Privacy & terms
+                        </a></li>
+                    <li><a class="text-muted" href="#">Sitemap</a></li>
+
+
+                </ul>
+            </div>
+
+
+
+        </div>
+        <!-- <div class="footcont">
+            <div class="lg">
+                <H3> TransferWise</H3>
+            </div>
+            <div class="lnk1">
+                <li><a class="text-muted" href="#">Legal</a></li>
+                <li><a class="text-muted" href="#">Country site map</a></li>
+
+            </div>
+            <div class="lnk2">
+                <li><a class="text-muted" href="#">Privacy policy</a></li>
+
+
+            </div>
+            <div class="lnk2">
+                <li><a class="text-muted" href="#">Cookie policy</a></li>
+
+
+            </div>
+
+
+        </div>
+
+        <h6 style="color: black; text-align: center; margin-top: 20px;">© TransferWise Ltd 2020</h6>
+        <h6 style="color: black; text-align: center; margin-top: 20px;">TransferWise is authorised by the Financial
+            Conduct Authority under the Electronic Money Regulations 2011, Firm Reference 900507, for the issuing of
+            electronic money.</h6>
+    </div> -->
+
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
