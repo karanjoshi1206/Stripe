@@ -2,9 +2,14 @@
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 body {
   font-family: "Roboto Slab", serif;
+  overflow-x: hidden;
+}
+html {
+  margin: 0 10px;
   overflow-x: hidden;
 }
 .nav {
@@ -31,7 +36,14 @@ body {
   font-weight: lighter;
   color: white;
 }
-
+.nav4 {
+  background: rgba(253, 255, 146, 0.664);
+  width: 30px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  display: none;
+}
 .container1::before {
   content: "";
   position: absolute;
@@ -188,6 +200,9 @@ input {
   width: 50%;
   display: flex;
 }
+.im2 {
+  overflow: hidden;
+}
 .im2 img {
   height: 300px;
   width: 500px;
@@ -258,7 +273,6 @@ input {
   display: flex;
 }
 .lasttext {
-  height: 150vh;
   background-color: #1d2757;
   background-image: linear-gradient(90deg, #4158d0);
   padding: 90px;
@@ -293,16 +307,15 @@ p {
 }
 .lst {
   background-color: #2b3981;
-  height: 400px;
-  width: 500px;
-  margin-left: 30px;
+
+  margin: 30px;
   padding: 30px;
   margin-bottom: 5px;
 }
 .cards {
   margin: 40px;
   padding: 30px;
-  height: 70vh;
+  /* height: 70vh; */
   /* background-color: yellow; */
 }
 .cards h4 {
@@ -361,10 +374,144 @@ p {
 
   color: white;
 }
-
+.chng h5 a,
+.chng h6 a {
+  color: black;
+}
 .bn {
   display: flex;
 }
 .crd {
   width: 30%;
+}
+
+@media (max-width: 768px) {
+  .modbod {
+    flex-direction: column;
+  }
+  .nav2,
+  .nav3 {
+    display: none;
+  }
+  .nav4 {
+    display: block;
+  }
+  .nav {
+    justify-content: space-around;
+  }
+  .container2 {
+    margin-left: 50px;
+  }
+  .textcontent {
+    width: 100%;
+    display: flex;
+    margin-left: 0px;
+  }
+  .nbtn {
+    margin: 50px;
+  }
+
+  .lasttext {
+    background-color: #1d2757;
+    background-image: linear-gradient(90deg, #4158d0);
+    padding: 50px 10px;
+    width: 100%;
+    height: 100%;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .lst {
+    background-color: #2b3981;
+    height: 300px;
+    width: 300px;
+    margin-left: 10px;
+    padding: 30px;
+    margin-bottom: 5px;
+  }
+
+  .cards {
+    margin: 40px;
+    padding: 10px;
+    height: 100%;
+  }
+  .cardcontent {
+    flex-direction: column;
+  }
+  .card1 {
+    height: 100%;
+    width: 100%;
+    margin: 20px;
+  }
+  .lasttext {
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+  }
+  .last {
+    width: 100%;
+  }
+  .end {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .mobim,
+  .im2 {
+    display: none;
+  }
+  .container2 {
+    margin: 0px;
+  }
+  .content {
+    width: 100%;
+    margin-right: 0;
+  }
+  .content h1 {
+    font-size: 30px;
+  }
+  .logo {
+    margin: 0;
+  }
+  .textcontent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+  .text1,
+  .text2,
+  .text3 {
+    margin: 0;
+    width: 100%;
+  }
+  .nbtn {
+    position: relative;
+    top: 0px;
+    left: 100px;
+
+    margin: 10px 0;
+  }
+  .tst {
+    flex-direction: column;
+  }
+  .txtt {
+    width: 100%;
+  }
+
+  .lst {
+    background-color: #2b3981;
+
+    margin-left: 0px;
+  }
+  .cards h1 {
+    margin: 20px;
+    width: 100%;
+    color: black;
+  }
+  .cards {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+  }
 }
