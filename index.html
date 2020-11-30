@@ -7,14 +7,14 @@
     <title>Online Payment</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
         crossorigin="anonymous" />
 </head>
 
 <body>
-    <style>
+    <!-- <style>
         @import url("https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@600&family=Lato:wght@900&family=Roboto+Slab:wght@600&display=swap");
 
         * {
@@ -451,7 +451,7 @@
         .crd {
             width: 30%;
         }
-    </style>
+    </style> -->
     <nav>
         <div class="container1">
             <div class="nav">
@@ -472,6 +472,9 @@
                     <button class="btn1">
                         Submit
                     </button>
+                </div>
+                <div id="bar" class="nav4">
+                    <i data-toggle="modal" data-target="#exampleModal" class="fas fa-bars"></i>
                 </div>
             </div>
         </div>
@@ -696,6 +699,81 @@
         </div>
 
     </nav>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Products</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modbod">
+                        <div class="payment">
+
+                            <div class="value chng">
+                                <h5> <a href="#">Payment</a> </h5>
+                                <h6> <a href="#">Online Payment</a> </h6>
+                                <h5> <a href="#">Terminal</a> </h5>
+                                <h6> <a href="#">In-person payments</a> </h6>
+                                <h5> <a href="#">Connect</a> </h5>
+                                <h6> <a href="#">Payments for platforms</a> </h6>
+                                <h5> <a href="#">Billing</a> </h5>
+                                <h6> <a href="#">Subscriptions & invoicing</a> </h6>
+                            </div>
+                        </div>
+
+                        <div class="payment chng">
+
+                            <div class="value chng">
+                                <h5> <a href="#">Payouts</a>
+                                </h5>
+                                <h6> <a href="#"> Programmatic payouts</a>
+                                </h6>
+                                <h5> <a href="#">Issuing
+                                        Card creation</a> </h5>
+                                <h6> <a href="#">Card creation</a>
+                                </h6>
+
+                            </div>
+                        </div>
+
+                        <div class="payment chng">
+
+                            <div class="value chng">
+                                <h5> <a href="#">Radar</a>
+                                </h5>
+                                <h6> <a href="#">Fraud & risk management</a>
+                                </h6>
+                                <h5> <a href="#">Sigma</a>
+                                </h5>
+                                <h6> <a href="#">Custom reports</a>
+                                </h6>
+                                <h5> <a href="#">Atlas</a>
+
+                                </h5>
+                                <h6> <a href="#">Startup incorporation</a>
+                                </h6>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class=" m-auto btn btn-primary">Sign-in</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
     <div class="sponsor">
         <div class="logo"><img src="l1.png" alt=""></div>
         <div class="logo"><img src="l2.png" alt=""></div>
@@ -725,11 +803,11 @@
         </div>
 
     </div>
+
     <button class="btn2 nbtn">
         Start with payment
 
     </button>
-
     <div class="lasttext">
         <div class="tst">
             <div class="txtt">
@@ -969,46 +1047,19 @@
 
 
         </div>
-        <!-- <div class="footcont">
-            <div class="lg">
-                <H3> TransferWise</H3>
-            </div>
-            <div class="lnk1">
-                <li><a class="text-muted" href="#">Legal</a></li>
-                <li><a class="text-muted" href="#">Country site map</a></li>
 
-            </div>
-            <div class="lnk2">
-                <li><a class="text-muted" href="#">Privacy policy</a></li>
+    </div>
 
 
-            </div>
-            <div class="lnk2">
-                <li><a class="text-muted" href="#">Cookie policy</a></li>
-
-
-            </div>
-
-
-        </div>
-
-        <h6 style="color: black; text-align: center; margin-top: 20px;">© TransferWise Ltd 2020</h6>
-        <h6 style="color: black; text-align: center; margin-top: 20px;">TransferWise is authorised by the Financial
-            Conduct Authority under the Electronic Money Regulations 2011, Firm Reference 900507, for the issuing of
-            electronic money.</h6>
-    </div> -->
-
-
-
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
